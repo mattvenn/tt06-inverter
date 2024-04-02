@@ -9,12 +9,14 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Initially I just wanted to do an inverter, but then I thought I'll make the inverter much more powerful.
+The problem with much bigger output transistors is that their gate capacitance increases, and so the inverter is slower.
+My adding a primary, smaller inverter in front, I get much faster rise times on the big transistors.
 
 ## How to test
 
-Explain how to use your project
+Apply a pulse to analog pin 0 and see it replicated on analog pin 1.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Oscilloscope
