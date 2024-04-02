@@ -2,7 +2,11 @@
 
 # Tiny Tapeout Analog Project Template
 
+- [Open the schematic in your browser](https://xschem-viewer.com/?file=https://github.com/mattvenn/tt06-inverter/blob/main/xschem/inverter.sch)
+
 - [Read the documentation for project](docs/info.md)
+
+![layout](docs/layout.png)
 
 ## What is Tiny Tapeout?
 
