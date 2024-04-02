@@ -61,6 +61,7 @@ N -50 80 -50 130 {
 lab=VSS}
 N -130 130 -50 130 {
 lab=VSS}
+N -20 30 -20 40 {}
 C {devices/iopin.sym} -160 -150 0 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} -160 -120 0 0 {name=p2 lab=VSS}
 C {sky130_fd_pr/pfet_01v8.sym} 50 -30 0 0 {name=M1
@@ -125,3 +126,4 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} -130 -80 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -130 130 0 0 {name=p9 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -20 40 0 0 {name=p7 sig_type=std_logic lab=not_in}

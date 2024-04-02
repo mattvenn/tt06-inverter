@@ -1,0 +1,9 @@
+** sch_path: /home/matt/work/asic-workshop/shuttle-2404/tt06-inverter/xschem/inverter.sch
+.subckt inverter VDD VSS OUT IN
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XM1 OUT not_in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=20 nf=20 m=1
+XM2 OUT not_in VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=20 m=1
+XM3 not_in IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM4 not_in IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+.end
