@@ -85,7 +85,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 
 "
 spice_ignore=false}
@@ -106,13 +106,9 @@ value="
 .options savecurrents
 vin in 0 pulse 0 1.8 5n 1n 1n 50n 100n
 .control
-  repeat 10
     save all
     tran 10p 200n
     write testbench.raw
-    set appendwrite
-    reset
-    end
 .endc
 "}
 C {devices/vsource.sym} -240 0 0 0 {name=V1 value=1.8 savecurrent=false}
