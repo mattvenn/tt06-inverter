@@ -13,15 +13,16 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-07
+x1=3.7506644e-09
+x2=2.8489671e-08
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="out
-in"
-color="4 5"
+in
+out_parax"
+color="4 5 6"
 
 unitx=1
 logx=0
@@ -35,14 +36,15 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-07
+x1=3.7506644e-09
+x2=2.8489671e-08
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node=i(vmeas)
-color=5
+node="i(vmeas)
+i(vmeas1)"
+color="5 6"
 dataset=-1
 unitx=1
 logx=0
@@ -79,6 +81,30 @@ lab=in}
 N -270 670 -250 670 {
 lab=in}
 N -330 670 -270 670 {
+lab=in}
+N -240 920 -220 920 {
+lab=in}
+N -30 840 -30 870 {
+lab=vss}
+N 80 920 120 920 {
+lab=#net2}
+N 120 920 170 920 {
+lab=#net2}
+N 230 920 260 920 {
+lab=out_parax}
+N 260 920 300 920 {
+lab=out_parax}
+N 120 1010 150 1010 {
+lab=vss}
+N 150 920 150 950 {
+lab=#net2}
+N -380 920 -330 920 {
+lab=in}
+N -330 920 -320 920 {
+lab=in}
+N -260 920 -240 920 {
+lab=in}
+N -320 920 -260 920 {
 lab=in}
 C {devices/code.sym} -140 -30 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -133,3 +159,23 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 110 760 0 0 {name=p1 sig_type=std_logic lab=vss}
 C {devices/opin.sym} 290 670 0 0 {name=p8 lab=out}
+C {inverter.sym} -70 920 0 0 {name=x2
+schematic=inverter_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/inverter.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/inverter.sim.spice]"}
+C {devices/lab_pin.sym} -110 810 0 0 {name=p4 sig_type=std_logic lab=vdd}
+C {devices/lab_pin.sym} -30 840 0 0 {name=p9 sig_type=std_logic lab=vss}
+C {devices/ipin.sym} -380 920 0 0 {name=p10 lab=in}
+C {devices/ammeter.sym} -110 840 0 0 {name=Vmeas1}
+C {devices/res.sym} 200 920 1 0 {name=R2
+value=500
+footprint=1206
+device=resistor
+m=1}
+C {devices/capa.sym} 150 980 0 0 {name=C2
+m=1
+value=5p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 120 1010 0 0 {name=p11 sig_type=std_logic lab=vss}
+C {devices/opin.sym} 300 920 0 0 {name=p12 lab=out_parax}
