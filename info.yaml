@@ -50,8 +50,8 @@ pinout:
   uio[7]: ""
 
   # Analog pins - you can add more if you use them, up to 8
-  ua[0]: "input"
-  ua[1]: "output"
+  ua[0]: "output"
+  ua[1]: "input"
 
 # Do not change!
 yaml_version: 6
